@@ -22,9 +22,10 @@ html {
 
 /*clearfix*/
 .photobooth:after {
-  content: '';
-  display: block;
-  clear: both;
+  /*after등 가상 요소에 clearfix 적용*/
+  content: ''; /*float속성을 적용한 요소의 부모요소에 after걸고 빈 content를 만들어 float 초기화*/
+  display: block; /*해당 태그 다음에 올 태그들이 위로 딸려오지 않고 그 다음에 위치하게 된다 */
+  clear: both; /*왼쪽 오른쪽 모두 붙는 float 정렬을 취소*/
 }
 
 .photo {
